@@ -1,12 +1,12 @@
 from random import *
 import os
+import io
+print("Загрузите воросы из билетов в файл q.txt")
 if input("1 - винда\n2 - линух\n") == "1":
     clear = lambda: os.system('cls')
 else:
     clear = lambda: os.system('clear')
-hint = open("quest.txt").readline()
-print(hint)
-f = open("quest.txt").readlines()
+f = io.open("q.txt", encoding='utf-8').readlines()
 quest = [x.replace('\n','')for x in f]
 quest.pop()
 generated_list = []
