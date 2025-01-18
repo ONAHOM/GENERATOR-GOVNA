@@ -13,6 +13,7 @@ generated_list = []
 r = 0
 w = 0
 number_of_questions = int(input("Воросов в твоем билете - "))
+clear()
 print(f"Тебя приветсвует ебучий тест на {int(len(quest)/number_of_questions) + int(len(quest)%number_of_questions)} вопросов.")
 
 while quest:
