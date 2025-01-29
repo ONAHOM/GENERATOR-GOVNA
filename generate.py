@@ -14,13 +14,13 @@ r = 0
 w = 0
 number_of_questions = int(input("Воросов в твоем билете - "))
 clear()
-print(f"Тебя приветсвует ебучий тест на {int(len(quest)/number_of_questions) + int(len(quest)%number_of_questions)} вопросов.")
+print(f"Тебя приветсвует ебучий тест на из {len(quest)} вопросов.")
 
 while quest:
     for i in range(number_of_questions):
         if len(quest) != 0:
             q = choice(quest)
-            print(f"{i+1}. {q}")
+            print(f"{i+1}. {q} (номер вопроса {quest.index(q) + 1})")
             quest.remove(q)
     print("шариш?")
     print("1 - да\n2 - нет, давай рерол\n3 - Заебался")
@@ -28,11 +28,11 @@ while quest:
     if a == "1":
         clear()
         r +=1
-        print("красава","Осталось билетов:",int(len(quest)/2))
+        print("красава","Осталось вопросов:",len(quest))
     elif a == "2":
         clear()
         w+=1
-        print("🤦","Осталось билетов:",int(len(quest)/2))
+        print("🤦","Осталось вопросов:",len(quest))
     else:
         clear()
         print("Пока")
