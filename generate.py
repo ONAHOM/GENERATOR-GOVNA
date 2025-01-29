@@ -8,6 +8,7 @@ else:
     clear = lambda: os.system('clear')
 f = io.open("q.txt", encoding='utf-8').readlines()
 quest = [x.replace('\n','')for x in f]
+QUESTS = quest.copy()
 quest.pop()
 generated_list = []
 r = 0
@@ -20,7 +21,7 @@ while quest:
     for i in range(number_of_questions):
         if len(quest) != 0:
             q = choice(quest)
-            print(f"{i+1}. {q} (номер вопроса {quest.index(q) + 1})")
+            print(f"{i+1}. {q} (номер вопроса {QUESTS.index(q) + 1})")
             quest.remove(q)
     print("шариш?")
     print("1 - да\n2 - нет, давай рерол\n3 - Заебался")
